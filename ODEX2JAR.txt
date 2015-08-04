@@ -1,0 +1,7 @@
+This is for KK odex files
+
+cd /tmp/
+java -jar ~/android-tools/baksmali-2.0.5.jar -x ssrm.odex -o ssrm -d framework/
+java -jar ~/android-tools/smali-2.0.5.jar -o ssrm.dex ssrm
+cd ~/android-tools/dex2jar*
+./d2j-dex2jar.sh -o /tmp/ssrm-deodex.jar /tmp/ssrm.dex
