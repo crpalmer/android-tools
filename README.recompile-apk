@@ -1,0 +1,4 @@
+java -jar ~/android-tools/apktool_2.0.2.jar d input.apk
+java -jar ~/android-tools/apktool_2.0.2.jar b -o output.apk input
+jarsigner -keystore ~/android-tools/keystore -verbose /tmp/output.apk crpalmer
+adb install output.apk
