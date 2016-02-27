@@ -1,0 +1,5 @@
+./oat2dex boot framework/arm64/boot.oat
+./oat2dex framework/arm64/qcnvitems.odex framework/arm64/odex/
+cp framework/arm64/qcnvitems.dex classes.dex
+dx --dex --output=qcnvitems.jar classes.dex
+
